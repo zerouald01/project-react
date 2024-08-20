@@ -1,6 +1,7 @@
 import { Badge, Navbar, Nav, Container } from "react-bootstrap";;
 import styles from './header.module.css';
-import Bascket from "@components/eCom/Bascket/Bascket";
+import { Bascket } from "@components/eCom";
+import { NavLink } from "react-router-dom";
 
 const { headerContainer, headerLogo, navBar } = styles;
 
@@ -18,13 +19,13 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>Home</Nav.Link>
-              <Nav.Link>Categories</Nav.Link>
-              <Nav.Link>About</Nav.Link>
+              <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+              <Nav.Link as={NavLink} to="/categories">Categories</Nav.Link>
+              <Nav.Link as={NavLink} to="/about-us">About</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link>Login</Nav.Link>
-              <Nav.Link>Register</Nav.Link>
+              <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
+              <Nav.Link as={NavLink} to="/register">Register</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
