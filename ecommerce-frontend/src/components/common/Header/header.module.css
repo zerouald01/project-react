@@ -16,10 +16,10 @@
 }
   
 .navBar {
-    background-color: #c4b8b8;
+    background-color: #f1eded;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .navBar a:hover {
     color: #eb0b0b;
