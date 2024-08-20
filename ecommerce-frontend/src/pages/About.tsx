@@ -3,7 +3,7 @@
 const About = () => {
   return (
     <div>
-      Cat
+      about
     </div>
   )
 }

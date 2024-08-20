@@ -1,5 +1,5 @@
 
-import MainLayout from '@layouts/MainLayout/MainLayout'
+
 import { createRoot } from 'react-dom/client'
 
 //styles 

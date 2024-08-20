@@ -1,0 +1,10 @@
+.pageError {
+    margin-top: 10%;
+    text-align: center;
+}
+.pageError h1{
+    font-size: 90px;
+}
+.pageError p{
+    font-size: 45px;
+}
