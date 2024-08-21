@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "@redux/hooks"
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { actGetProducts, clearProducts } from "@redux/products/productsSlice";
+import Loading from "@components/feedback/Loading";
 
 
 const Products = () => {
@@ -31,6 +32,11 @@ const Products = () => {
 
   return (
     <Container>
+        <Loading loading={loading} error={error}>
+            <Row>
+                {productList}
+            </Row>
+        </Loading>
         <Row>
             {productList}
         </Row>

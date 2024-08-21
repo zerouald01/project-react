@@ -3,6 +3,7 @@ import { Category } from "@components/eCom"
 import { useAppDispatch, useAppSelector } from "@redux/hooks"
 import { useEffect } from "react";
 import { actGetCategories } from "@redux/categories/categoriesSlice";
+import Loading from "@components/feedback/Loading";
 
 const Categories = () => {
 
@@ -25,11 +26,16 @@ const Categories = () => {
     })  : <p>there are no categories</p>   
 
   return (
+    
     <Container>
-        <Row>
-            {categoriesList}
-        </Row>
+        <Loading loading={loading} error={error}>
+            <Row>
+                {categoriesList}
+            </Row>
+        </Loading>
     </Container>
+    
+
   )
 }
 
