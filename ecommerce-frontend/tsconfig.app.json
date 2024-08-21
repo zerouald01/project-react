@@ -33,7 +33,7 @@
         "@layouts/*": ["src/layouts/*"],
         "@util/*": ["src/util/*"],
         "@services/*": ["src/services/*"],
-        "@types/*": ["src/types/*"],
+        "@customtypes/*": ["src/types/*"],
       },
 
   },
