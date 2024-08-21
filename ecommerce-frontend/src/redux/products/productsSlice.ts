@@ -16,7 +16,11 @@ const initialState : ICategoriesState = {
 const productsSlice = createSlice({
     name : 'products',
     initialState,
-    reducers :{},
+    reducers :{
+        clearProducts : (state) => {
+            state.records = []
+        }
+    },
     extraReducers : (builder) => {
         builder
             .addCase(actGetProducts.pending, (state) => {
@@ -35,6 +39,6 @@ const productsSlice = createSlice({
             })
     }
 })
-
+export const {clearProducts} = productsSlice.actions
 export {actGetProducts}
 export default productsSlice.reducer

@@ -3,7 +3,7 @@ import { Product } from "@components/eCom"
 import { useAppDispatch, useAppSelector } from "@redux/hooks"
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { actGetProducts } from "@redux/products/productsSlice";
+import { actGetProducts, clearProducts } from "@redux/products/productsSlice";
 
 
 const Products = () => {
@@ -12,6 +12,11 @@ const Products = () => {
     const {loading, records, error} = useAppSelector(state => state.productsReducer);
     useEffect(()=>{
         dispatch(actGetProducts(params.prefix as string));
+
+        return () =>{
+          dispatch(clearProducts());
+        }
+
     },[dispatch, params]);
 
     const productList =
