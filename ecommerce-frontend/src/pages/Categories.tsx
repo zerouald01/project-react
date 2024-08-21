@@ -13,14 +13,14 @@ const Categories = () => {
     },[dispatch]);
 
     const categoriesList =
-    records.length === 0 ? null :
+    records.length > 0 ? 
     records.map((category) => {
         return (
             <Col  key={category.id} xs={12} sm={6} md={4} lg={3}>
                 <Category {...category} />
             </Col>
         )
-    })
+    })  : <p>there are no categories</p>   
 
   return (
     <Container>
