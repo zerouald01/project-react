@@ -20,11 +20,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 200px
 }
 .categoryImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: skeleton-loading 1.2s infinite;
+    border-radius: 20px;
+}
+@keyframes skeleton-loading {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
 }
 .categoryTitle {
     margin: 10px;
