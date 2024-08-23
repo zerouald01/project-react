@@ -9,7 +9,7 @@ import { GridList } from "@components/common";
 const Categories = () => {
 
     const dispatch = useAppDispatch();
-    const {loading, records, error} = useAppSelector(state => state.categoriesReducer);
+    const {loading, records, error} = useAppSelector(state => state.categories);
     useEffect(()=>{
         if(records.length === 0) {
             dispatch(actGetCategories());

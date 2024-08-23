@@ -11,7 +11,7 @@ import { GridList } from "@components/common";
 const Products = () => {
   const params = useParams();
   const dispatch = useAppDispatch();
-    const {loading, records, error} = useAppSelector(state => state.productsReducer);
+    const {loading, records, error} = useAppSelector(state => state.products);
     useEffect(()=>{
         dispatch(actGetProducts(params.prefix as string));
 
