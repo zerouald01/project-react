@@ -5,6 +5,10 @@ import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import {store, persistore} from '@redux/store'
+
+//axios
+import '@services/API/axios-global'
+
 //styles 
 import '@styles/global.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'

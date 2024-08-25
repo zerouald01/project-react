@@ -8,7 +8,7 @@ const actGetProducts = createAsyncThunk(
     'products/actGetProducts',
     async (prefix: string ,{rejectWithValue}) => {
         try {
-            const response = await axios.get<TResponse>(`http://localhost:5000/products?cat_prefix=${prefix}`)
+            const response = await axios.get<TResponse>(`/products?cat_prefix=${prefix}`)
             return response.data
         } catch (error) {
             if(axios.isAxiosError(error)) {
