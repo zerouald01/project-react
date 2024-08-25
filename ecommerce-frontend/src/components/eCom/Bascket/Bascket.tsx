@@ -3,6 +3,7 @@ import styles from './bascket.module.css'
 import { useAppSelector } from '@redux/hooks';
 import { selectTotalQuantity } from '@redux/cart/cartSlice';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const { basketContainer, bascketSize, basketQuantity, animate } = styles;
 
@@ -18,8 +19,10 @@ const Bascket = () => {
       }, 3000);
     }
   }, [totalQuantity]);
+
+  const navigate = useNavigate();
   return (
-    <div className={basketContainer}>
+    <div className={basketContainer} onClick={()=>navigate('/cart')}>
       <Logo aria-label="basket icon" className={bascketSize} />
       <div className={`${basketQuantity} ${animateQuantity ? animate : ''}`}>{totalQuantity}</div>
     </div>
