@@ -21,6 +21,7 @@ const Categories = () => {
   return (
     
     <Container>
+        <h1>Categories</h1>
         <Loading loading={loading} error={error}>
         <GridList records={records} renderItem={(record) => <Category {...record} />} />
         </Loading>
